@@ -20,7 +20,7 @@ function setup() {
 	
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,656);
-	paperball= new Paper(200,200,60)
+	paperball= new Paper(200,200,25)
 
 	Engine.run(engine);
 	//Render.run(render);
@@ -34,13 +34,13 @@ function draw() {
 
   if(keyDown("up"))
   {
-	  Body.applyForce(paperball.body,paperball.body.position,{x:60,y:-90});
+	  Body.applyForce(paperball.body,paperball.body.position,{x:30,y:-45});
   }
  
 
   groundObject.display();
-  dustbinObj.display();
   paperball.display();
+  dustbinObj.display();
 
 }
 
